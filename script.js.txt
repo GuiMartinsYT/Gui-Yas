@@ -1,0 +1,14 @@
+function handleResponse(choice) {
+    const messageDiv = document.getElementById('message');
+    const video = document.getElementById('video');
+
+    if (choice === 'sim') {
+        messageDiv.textContent = 'Que ótimo! Fico feliz com a sua escolha!';
+        video.style.display = 'block';
+    } else if (choice === 'não') {
+        messageDiv.textContent = 'Ah, que pena! Pense bem, talvez você possa gostar. Vamos tentar mais uma vez?';
+        video.style.display = 'none'; // Não exibe o vídeo
+    } else {
+        messageDiv.textContent = 'Resposta inválida. Por favor, responda com "sim" ou "não".';
+    }
+}

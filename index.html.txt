@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Escolha e Vídeo</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
+        video {
+            max-width: 100%;
+            height: auto;
+        }
+        .message {
+            margin-top: 20px;
+            font-size: 1.2em;
+        }
+    </style>
+</head>
+<body>
+    <h1>Deseja assistir ao vídeo?</h1>
+    <form id="responseForm">
+        <button type="button" onclick="handleResponse('sim')">Sim</button>
+        <button type="button" onclick="handleResponse('não')">Não</button>
+    </form>
+
+    <div class="message" id="message"></div>
+
+    <video id="video" controls style="display: none;">
+        <source src="video.mp4" type="video/mp4">
+        Seu navegador não suporta o elemento de vídeo.
+    </video>
+
+    <script src="script.js"></script>
+</body>
+</html>
